@@ -1,10 +1,16 @@
 #!/usr/bin/env coffee
 
+unless version = process.argv[2]
+  console.log "cannot update without version number in SemVar format (eg. 1.4.9)"
+  process.exit(1)
+
 fs = require "fs"
 
-name = "bower.json"
+writeVersion = (fileName) ->
+  json = require "../#{fileName}"
+  json.version = version
 
-json = require "../#{name}"
-json.version = process.argv[2]
+  fs.writeFileSync fileName, JSON.stringify(json, null, 2) + "\n"
 
-fs.writeFileSync name, JSON.stringify(json, null, 2) + "\n"
+writeVersion "bower.json"
+writeVersion "package.json"

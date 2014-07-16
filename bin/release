@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# update both package.json and bower.json to have the same version
+bin/update_version $1
+
+npm publish
+
+# pushes SemVar tag for bower
+bin/tag

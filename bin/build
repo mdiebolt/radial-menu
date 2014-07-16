@@ -1,4 +1,0 @@
-#! /bin/bash
-
-browserify site/main.coffee -o site/build.js
-jade ./site

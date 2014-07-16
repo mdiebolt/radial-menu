@@ -2,10 +2,7 @@
 
 set -e
 
-git pull
-
-VERSION=`echo "console.log(require('./package').version)" | node`
-bin/update_version $VERSION
+VERSION=`echo "console.log(require('./bower').version)" | node`
 
 bin/prepublish
 
