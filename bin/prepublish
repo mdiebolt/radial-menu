@@ -1,0 +1,3 @@
+#! /bin/bash
+
+browserify lib/radial_menu.coffee --standalone radial_menu -o dist/main.js

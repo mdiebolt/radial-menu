@@ -1,0 +1,22 @@
+{
+  "name": "radial-menu",
+  "version": "0.0.1",
+  "homepage": "https://github.com/mdiebolt/radial-menu",
+  "authors": [
+    "Matt Diebolt <mdiebolt@gmail.com>"
+  ],
+  "description": "Animated radial menus",
+  "main": "dist/main.js",
+  "keywords": [
+    "Raphael",
+    "SVG"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "test",
+    "tests"
+  ]
+}

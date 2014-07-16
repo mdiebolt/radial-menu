@@ -1,0 +1,10 @@
+#!/usr/bin/env coffee
+
+fs = require "fs"
+
+name = "bower.json"
+
+json = require "../#{name}"
+json.version = process.argv[2]
+
+fs.writeFileSync name, JSON.stringify(json, null, 2) + "\n"
